@@ -18,14 +18,30 @@ font-weight:bolder;
 </head>
 <body class="bg-info">
 
-<a id="buttonc" class="btn btn-warning" onClick="clickme()">Click Here</a>
-
+<a id="buttonc" class="btn btn-warning d-none" onClick="clickme()">Click Here</a>
+  
+ <a class="btn btn-warning" onClick="clickme2()">Click Here To See Magic</a>
+  <div id="magic">
+    <h2 class="blink">Chamakk Chhallo</h2>
+  <img src="Snap.jpg" height="300px" width="150px" >
+</div>
 </body>
 <script>
+  $('#magic').hide();
 function clickme(){
 prompt("Harsh Fudu hai !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \nWhat are your reviews on this....Write it!");
 alert("Jo mrji keh lo pr Harsh ta Fudu hi hai....");
 
 }
+  
+  function clickme2(){
+           $('#magic').show(3000);   
+}
+  
+  function blink_text() {
+    $('.blink').fadeOut(500);
+    $('.blink').fadeIn(500);
+}
+setInterval(blink_text, 1000);
 </script>
 </html>
